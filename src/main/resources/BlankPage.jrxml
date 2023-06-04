@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4a3bc873-a26e-4724-8dcc-756ebbeacd10">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="prolabemail" class="java.lang.String"/>
+	<parameter name="website" class="java.lang.String"/>
+	<parameter name="imagePath" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="image" class="java.lang.Byte"/>
+	<background>
+		<band height="802" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="-1" width="560" height="803" uuid="8a5d9882-6b91-42d8-b2ed-b02c8faebd44"/>
+			</rectangle>
+			<image>
+				<reportElement x="360" y="8" width="178" height="66" uuid="a0a45f3a-6339-4f02-a8d6-78e7cec16fee">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["E:/Abhishek_Projects/HTML-DEMO/images/ProLab.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="37" y="74" width="509" height="19" uuid="3cb0e0f9-7fa0-4fb8-8fb2-986276626790">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" markup="none">
+					<font fontName="Arial Black" size="10" isBold="false"/>
+					<paragraph lineSpacingSize="1.0"/>
+				</textElement>
+				<text><![CDATA[===========================================================================================]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="61" y="770" width="425" height="31" uuid="fcf99f36-3750-46d8-9ece-81bbc318b525"/>
+				<staticText>
+					<reportElement x="30" y="0" width="79" height="20" uuid="ae2c2741-965c-4ebc-adef-4d5111f01b83"/>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Yu Gothic UI Light"/>
+					</textElement>
+					<text><![CDATA[MAIL US:- ]]></text>
+				</staticText>
+				<textField hyperlinkType="RemoteAnchor">
+					<reportElement x="109" y="0" width="131" height="20" uuid="d613e136-1a67-468f-92be-5ecd14019a34">
+						<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+						<property name="net.sf.jasperreports.style.pen.lineColor" value="#1124F2"/>
+						<property name="net.sf.jasperreports.style.backcolor" value="#0955E3"/>
+						<property name="net.sf.jasperreports.style.forecolor" value="#1251E3"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="Yu Gothic UI Light" size="11" isUnderline="true"/>
+						<paragraph firstLineIndent="0" leftIndent="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{prolabemail}]]></textFieldExpression>
+					<hyperlinkAnchorExpression><![CDATA["mailto$P{prolabemail}"]]></hyperlinkAnchorExpression>
+				</textField>
+				<staticText>
+					<reportElement x="240" y="0" width="184" height="20" uuid="21fc86e1-d23c-47c4-b7ab-9fb6da554548">
+						<property name="net.sf.jasperreports.style.forecolor" value="#6198FF"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="Yu Gothic UI Light"/>
+						<paragraph lineSpacingSize="1.0" leftIndent="10"/>
+					</textElement>
+					<text><![CDATA[CALL US @ 7666785999]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="166" y="12" width="151" height="20" uuid="4d470dda-07f3-400c-8f91-a85da3f913f7">
+						<property name="net.sf.jasperreports.style.forecolor" value="#346CED"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$P{website}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<image scaleImage="FillFrame" hAlign="Center">
+				<reportElement x="10" y="99" width="537" height="651" uuid="62388e0c-5edf-4177-bd1d-03565caafeb3"/>
+				<imageExpression><![CDATA[$P{imagePath}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+</jasperReport>
