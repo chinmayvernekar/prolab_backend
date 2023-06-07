@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import javax.annotation.PostConstruct;
+
 import org.apache.pdfbox.multipdf.PDFMergerUtility;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -30,6 +33,16 @@ import net.sf.jasperreports.engine.JasperReport;
 @Service
 public class PdfServiceImpl implements PdfService {
 	
+	
+	private static String LOGO_PATH = "";
+	private static String PRINT_ENV = "";
+	
+	@PostConstruct
+	public void getResourceFromServerPath() {
+		 ClassLoader classLoader = getClass().getClassLoader();
+		 LOGO_PATH = classLoader.getResource("ProLab.PNG").getPath();
+		 PRINT_ENV = classLoader.getResource("considerBeforePrint.PNG").getPath();
+	}
 
 
 	@Override
@@ -76,6 +89,8 @@ public class PdfServiceImpl implements PdfService {
 		 	InputStream inputStream = getClass().getResourceAsStream("/Quotation.jrxml");
 	        JasperReport jasperReport = JasperCompileManager.compileReport(inputStream);
 	        Map<String, Object> parameters = new HashMap<String, Object>();
+	        parameters.put("pro_lab_logo", LOGO_PATH);
+	        parameters.put("consider_before_print", PRINT_ENV);
 	        parameters.put("custName", pdf.getCustomerName());
 	        parameters.put("address", pdf.getAddress());
 	        parameters.put("contactPerson", pdf.getContactPerson());
@@ -115,6 +130,7 @@ public class PdfServiceImpl implements PdfService {
 	        parameters.put("imagePath", pdf.getImage_1_path());
 	        parameters.put("prolabemail", " prolabindia29@gmail.com");
 	        parameters.put("website", " www.prolabindia.in");
+	        parameters.put("pro_lab_logo", LOGO_PATH);
 	        JasperPrint jasperPrint = JasperFillManager.fillReport( jasperReport,parameters, new JREmptyDataSource());
 	        /* outputStream to create PDF */
 	        OutputStream outputStream = new FileOutputStream(new File(path));
@@ -131,6 +147,7 @@ public class PdfServiceImpl implements PdfService {
 	        parameters.put("imagePath", pdf.getImage_2_path());
 	        parameters.put("prolabemail", " prolabindia29@gmail.com");
 	        parameters.put("website", " www.prolabindia.in");
+	        parameters.put("pro_lab_logo", LOGO_PATH);
 	        JasperPrint jasperPrint = JasperFillManager.fillReport( jasperReport,parameters, new JREmptyDataSource());
 	        /* outputStream to create PDF */
 	        OutputStream outputStream = new FileOutputStream(new File(path));
@@ -147,6 +164,7 @@ public class PdfServiceImpl implements PdfService {
 	        parameters.put("imagePath", pdf.getImage_3_path());
 	        parameters.put("prolabemail", " prolabindia29@gmail.com");
 	        parameters.put("website", " www.prolabindia.in");
+	        parameters.put("pro_lab_logo", LOGO_PATH);
 	        JasperPrint jasperPrint = JasperFillManager.fillReport( jasperReport,parameters, new JREmptyDataSource());
 	        /* outputStream to create PDF */
 	        OutputStream outputStream = new FileOutputStream(new File(path));
@@ -163,6 +181,7 @@ public class PdfServiceImpl implements PdfService {
 	        parameters.put("imagePath", pdf.getImage_4_path());
 	        parameters.put("prolabemail", " prolabindia29@gmail.com");
 	        parameters.put("website", " www.prolabindia.in");
+	        parameters.put("pro_lab_logo", LOGO_PATH);
 	        JasperPrint jasperPrint = JasperFillManager.fillReport( jasperReport,parameters, new JREmptyDataSource());
 	        /* outputStream to create PDF */
 	        OutputStream outputStream = new FileOutputStream(new File(path));

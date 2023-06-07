@@ -186,6 +186,8 @@
 	<parameter name="supply_line_1" class="java.lang.String"/>
 	<parameter name="supply_line_2" class="java.lang.String"/>
 	<parameter name="supply_line_3" class="java.lang.String"/>
+	<parameter name="pro_lab_logo" class="java.lang.String"/>
+	<parameter name="consider_before_print" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -198,7 +200,7 @@
 				<reportElement x="353" y="5" width="178" height="80" uuid="b42acadb-fb0c-420c-92b0-76ac159d5c56">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<imageExpression><![CDATA["E:/Abhishek_Projects/HTML-DEMO/images/ProLab.PNG"]]></imageExpression>
+				<imageExpression><![CDATA[$P{pro_lab_logo}]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="50" y="84" width="485" height="19" uuid="d7f92d62-173e-455b-8345-b6217271a540">
@@ -866,7 +868,7 @@
 				</textField>
 				<image>
 					<reportElement x="20" y="90" width="318" height="21" uuid="78e585cd-bf76-4763-8646-663da0795a7f"/>
-					<imageExpression><![CDATA["E:/Abhishek_Projects/ThymeleafPDFExample/SpringThymeleafPDF/images/considerBeforePrint.PNG"]]></imageExpression>
+					<imageExpression><![CDATA[$P{consider_before_print}]]></imageExpression>
 				</image>
 				<staticText>
 					<reportElement x="165" y="70" width="74" height="20" uuid="a0bdd3a4-a3f9-4d35-a921-87696461493f"/>

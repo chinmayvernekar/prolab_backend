@@ -5,6 +5,7 @@
 	<parameter name="prolabemail" class="java.lang.String"/>
 	<parameter name="website" class="java.lang.String"/>
 	<parameter name="imagePath" class="java.lang.String"/>
+	<parameter name="pro_lab_logo" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -18,7 +19,7 @@
 				<reportElement x="360" y="8" width="178" height="66" uuid="a0a45f3a-6339-4f02-a8d6-78e7cec16fee">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<imageExpression><![CDATA["E:/Abhishek_Projects/HTML-DEMO/images/ProLab.PNG"]]></imageExpression>
+				<imageExpression><![CDATA[$P{pro_lab_logo}]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="37" y="74" width="509" height="19" uuid="3cb0e0f9-7fa0-4fb8-8fb2-986276626790">
