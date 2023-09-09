@@ -89,7 +89,7 @@ public class ProductServiceImpl implements ProductService {
 			// TODO: handle exception
 			ResponseEntity.status(HttpStatus.NOT_FOUND).body(e);
 		}
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(products);
+		return ResponseEntity.status(HttpStatus.OK).body(products);
 	}
 
 	public static String saveFileToExternalLocationOnServer(MultipartFile file) throws IOException {

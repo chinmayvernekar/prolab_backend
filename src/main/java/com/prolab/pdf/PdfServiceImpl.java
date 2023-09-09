@@ -108,6 +108,16 @@ public class PdfServiceImpl implements PdfService {
 	        parameters.put("supply_line_1", pdf.getSupply_line_1());
 	        parameters.put("supply_line_2", pdf.getSupply_line_2());
 	        parameters.put("supply_line_3", pdf.getSupply_line_3());
+	        parameters.put("tc_prices", parameters);
+	        parameters.put("tc_tax", parameters);
+	        parameters.put("tc_delivery", parameters);
+	        parameters.put("tc_freight", parameters);
+	        parameters.put("tc_installation", parameters);
+	        parameters.put("tc_approval", parameters);
+	        parameters.put("tc_payment", parameters);
+	        parameters.put("tc_warranty_line_1", parameters);
+	        parameters.put("tc_warranty_line_2", parameters);
+
 	        parameters.put("prolabemail", " prolabindia29@gmail.com");
 	        parameters.put("website", " www.prolabindia.in");
 	        JasperPrint jasperPrint = JasperFillManager.fillReport( jasperReport,parameters, new JREmptyDataSource());
