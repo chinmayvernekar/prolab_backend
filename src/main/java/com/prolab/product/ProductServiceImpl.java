@@ -43,22 +43,22 @@ public class ProductServiceImpl implements ProductService {
 			product.setSupply_line_1(supply_line_1);
 			product.setSupply_line_2(supply_line_2);
 			product.setSupply_line_3(supply_line_3);
-			if (!image_1.isEmpty()) {
+			if (!(image_1 == null)) {
 //				product.setImage_1_name(image_1.getOriginalFilename());
 //				product.setImage_1(image_1.getBytes());
 				product.setImage_1_path(saveFileToExternalLocationOnServer(image_1));
 			}
-			if (!image_2.isEmpty()) {
+			if (!(image_2 == null)) {
 //				product.setImage_2_name(image_2.getOriginalFilename());
 //				product.setImage_2(image_2.getBytes());
 				product.setImage_2_path(saveFileToExternalLocationOnServer(image_2));
 			}
-			if (!image_3.isEmpty()) {
+			if (!(image_3 == null)) {
 //				product.setImage_3_name(image_3.getOriginalFilename());
 //				product.setImage_3(image_3.getBytes());
 				product.setImage_3_path(saveFileToExternalLocationOnServer(image_3));
 			}
-			if (!image_4.isEmpty()) {
+			if (!(image_4 == null)) {
 //				product.setImage_4_name(image_4.getOriginalFilename());
 //				product.setImage_4(image_4.getBytes());
 				product.setImage_4_path(saveFileToExternalLocationOnServer(image_4));
